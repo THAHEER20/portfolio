@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#000  20%, rgb(255,121,38));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .attendance-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .attendance-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: rgb(255,121,38);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #D6786E;
+        }
+
+        .attendance-list {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+
+        .attendance-list h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .attendance-list p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="attendance-container">
+        <form class="attendance-form" onsubmit="return handleSubmit(event)">
+            <h2>Attendance Form</h2>
+            <div class="input-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="regNumber">Registration Number</label>
+                <input type="text" id="regNumber" name="regNumber" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="attendance-list" id="attendanceList">
+        <h3>Today's Attendance</h3>
+    </div>
+
+    <script>
+        const students = [];
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const regNumber = document.getElementById('regNumber').value;
+            const attendanceList = document.getElementById('attendanceList');
+
+            // Check if the registration number already exists
+            const existingStudent = students.find(student => student.regNumber === regNumber);
+            if (existingStudent) {
+                alert(`Attendance has already been given for Registration Number: ${regNumber}`);
+                return;
+            }
+
+            if (students.length >= 15) {
+                alert('Maximum number of students reached');
+                return;
+            }
+
+            students.push({ name, regNumber });
+
+            let detailsHtml = '';
+            students.forEach((student, index) => {
+                detailsHtml += `
+                    <p><strong>Student ${index + 1}:</strong></p>
+                    <p><strong>Name:</strong> ${student.name}</p>
+                    <p><strong>Registration Number:</strong> ${student.regNumber}</p>
+                `;
+            });
+
+            attendanceList.innerHTML = `<h3>Today's Attendance</h3>${detailsHtml}`;
+
+            document.querySelector('.attendance-form').reset();
+        }
+    </script>
+</body>
+</html>

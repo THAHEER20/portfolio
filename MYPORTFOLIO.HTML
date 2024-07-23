@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="MYPORTFOLIO.CSS">
+</head>
+<body>
+    <header id="Home">
+        <nav> 
+            <a class="left">Thaheer Shaik</a>
+            <div class="right">
+                <a href="#Home" onclick="scrollToTop">Home</a>
+                <a href="#About">About</a>
+                <a href="#Education">Education</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Contacts">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <section class="container1">
+                <pre>HI, I'm Thaheer,
+Here you can know more about me!!!</pre>
+                <a href="#About">About</a>
+            </section>
+            <section class="img">
+                <img src="MY PIC.jpg" alt="My photo">
+            </section>
+        </div>
+        <section id="About">
+            <h3>About me</h3>
+            <pre>I'm Thaheer, currently pursuing my BTech degree in Computer Science and Engineering at SRM AP University.
+Having completed my first year, I am excited to be advancing to my second year.
+During my holidays, I am undertaking an internship in front-end development with IBM, which has further fueled
+my passion for designing web pages.
+I love front-end development and enjoy creating engaging and user-friendly websites.</pre>
+            <a href="Resume.pdf" download class="download-button">Download Resume</a>
+        </section>
+
+        <section id="Education">
+            <div class="caption">Education details</div>
+            <table border="2px">
+                <thead>
+                    <tr>
+                        <th>COURSE</th>
+                        <th>SCHOOL/COLLEGE</th>
+                        <th>YEAR OF PASSING</th>
+                        <th>GRADES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BTech</td>
+                        <td>SRMAP University</td>
+                        <td>2027</td>
+                        <td>NA</td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>Sri Chaitanya</td>
+                        <td>2023</td>
+                        <td>92%</td>
+                    </tr>
+                    <tr>
+                        <td>SSC</td>
+                        <td>Sri Chaitanya</td>
+                        <td>2021</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="Projects">
+            <h3>Projects</h3>
+            <div class="projects-container">
+                <div class="project">
+                    <h4><a href="project1.html" title="Click to see project">Project 1</a></h4>
+                    <p>This is my First Project,when i started learning HTML and CSS i made this.CLICK ON project 1 above to see </p>
+                </div>
+                <div class="project">
+                    <h4><a href="project2.html"  title="Click to see project">Project 2</a></h4>
+                    <p>This is my second Project,when i started learning javascript,i made this .CLICK ON project 2 above to see</p>
+                </div>
+                <div class="project">
+                    <h4><a href="https://github.com/THAHEER20/PORJECT-FED.git"  title="Click to see project">Project 3</a></h4>
+                    <p>This is my Third porject,when i completed learning FED i made this, this the web page which your looking at now.CLICK ON project 3 above to see</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Contacts">
+            <div class="container2">
+                <h2>Contact Me</h2>
+                <form action="#" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Thaheer Shaik. All Rights Reserved.</p>
+            <p>Front-end Developer | BTech CSE, SRM AP University</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><img src="Linkedin.jpeg" alt="linkedin"></a>
+                <a href="https://github.com/yourusername" target="_blank"><img src="GitHub.jpeg" alt="github"></a>
+                <a href="https://twitter.com/yourusername" target="_blank"><img src="Twitter.jpeg" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="Instagram.jpg" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
+
+    <script>
+        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 1000|| document.documentElement.scrollTop > 1000) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Form submission confirmation
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you! Your message has been submitted.");
+            this.reset();
+        });
+    </script>
+</body>
+</html>

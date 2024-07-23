@@ -1,0 +1,330 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #010101;
+    background-image: url('https://e0.pxfuel.com/wallpapers/119/436/desktop-wallpaper-black-background-pics.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFFBDC;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 121, 38);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
+nav .left {
+    padding-left: 150px;
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #0E2431;
+}
+
+nav .left:hover {
+    color: #FFFBDC;
+}
+
+nav .right {
+    padding-right: 100px;
+}
+
+nav .right a {
+    color: #FFFBDC;
+    padding: 16px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+nav .right a:hover {
+    color: #0E2431;
+    font-size: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 100px 50px;
+    padding-top: 70px;
+}
+
+.container1 {
+    background-color: rgb(34, 31, 31);
+    padding: 50px;
+    border-radius: 20px;
+    min-width: 300px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.container1 pre {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.container1 a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(255, 121, 38);
+    text-decoration: none;
+    color: #FFFBDC;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.container1 a:hover {
+    padding: 10px 25px;
+}
+
+.img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img {
+    border-radius: 50%;
+    width: 330px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.img img:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4);
+}
+
+#About {
+    margin: 100px 50px;
+    margin-top: 300PX;
+    padding: 50px;
+    background-color: rgb(34, 31, 31);
+    border-radius: 20px;
+    font-weight: 150;
+    font-size: 20px;
+}
+
+#About h3 {
+    margin-bottom: 20px;
+    background-color: rgb(255, 121, 38);
+    color: #0E2431;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+#About .download-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(255, 121, 38);
+    text-decoration: none;
+    color: #FFFBDC;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+#About .download-button:hover {
+    padding: 10px 25px;
+}
+
+
+.caption{
+    background-color: rgb(255, 121, 38);
+    color: #0E2431;
+    margin-bottom: 35px;
+    padding: 10px;
+    border-radius:10px;
+    font-weight:bolder;
+    display: inline-block;
+    font-size: 1.5rem
+    
+}
+
+#Education {
+    margin: 100px 50px;
+    margin-top: 300px;
+    margin-bottom: 200px;
+    padding: 50px;
+    background-color: rgb(34, 31, 31);
+    border-radius: 20px;
+    overflow-x: auto;
+}
+
+#Education table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#Education th, #Education td {
+    border: 1px solid #FFFBDC;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#Education th {
+    background-color: rgb(255, 121, 38);
+    color: #0E2431;
+}
+
+#Projects h3{
+    color: #0E2431;
+    background-color: rgb(255, 121, 38);
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+
+}
+
+#Projects{
+    margin: 80px;
+    margin-bottom: 200px;
+}
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project {
+    background-color: rgb(34, 31, 31);
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFFBDC;
+}
+
+.project h4 a{
+    padding: 10px 20px;
+    color: #FFFBDC;
+    background-color: rgb(1, 1, 16);
+    border-radius: 10px;
+    text-decoration: none;
+}
+#Contacts {
+    margin: 100px 50px;
+}
+
+.container2 {
+    background-color: rgb(34, 31, 31);
+    border: 2px solid #FFFBDC;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFFBDC;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #FFFBDC;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #FFFBDC;
+    border-radius: 5px;
+    background-color: rgb(34, 31, 31);
+    color: #FFFBDC;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 121, 38);
+    color: #FFFBDC;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff7a26d9;
+}
+
+footer {
+    background-color: rgb(34, 31, 31);
+    color: #FFFBDC;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #FFFBDC;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+ 
+.social-links img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;;
+}
+
+.social-links a:hover {
+    text-decoration: none;
+    box-shadow: #010101;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(255, 121, 38);
+    color: #FFFBDC;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+#scrollToTopBtn:hover {
+    background-color: #ff7a26d9;
+}
